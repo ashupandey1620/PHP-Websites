@@ -6,66 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <p>This is a <?php
-    echo "awesome";
-    ?> Paragraph</p>
-    <?php
-    echo "Hello World in PHP";
-    ?>
+    <main>
+        <form action = "includes/formhandler.php" method = "post">
 
-    <?php
-    $name = "Dani Krossing";
-    echo $name;
-    ?>
+        <label for="firstname">Firstname?</label>
+        <input id="firstname" type="text" name="firstname" placeholder = "FirstName ...">
 
-    <?php
-    //Scaler Types (contain one value)
-    $string = "Daniel";
-    $int = 123456;
-    $float = 23.67;
-    $bool = true;
+        <label for="lastname">Lastname?</label>
+        <input id="lastname" type="text" name="lastname" placeholder = "LastName ...">
 
-    //Array Type (Contain Multiple Values)
-    $names = ["Daniel","Bella","Frida"];
-    $names2 = array("Daniel","Bella","Frida");
+        <label for="favpet">FavouritePet ?</label>
+        <select id="favpet" name="favpet" > 
+            <option value="none">None</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+        </select>
 
-    $names3; 
+        <button type = "submit">Submit</button>
 
-    //Object Type
-    // $object = new Car();
-
-    $array = [];
-
-    $object = null;
-
-    //should always assign anything like a default value otherwise the interpreter will give an error
-    ?>
-
-    <?php
-    echo $_SERVER["DOCUMENT_ROOT"];
-    echo "<br>";
-    echo $_SERVER["PHP_SELF"];
-    echo "<br>";
-    echo $_SERVER["SERVER_NAME"];
-    echo "<br>";
-    echo $_SERVER["REQUEST_METHOD"];
-
-    ?>
-
-    <?php
-    echo "<br>";
-    echo $_GET["name"];
-    echo "<br>";
-    echo $_GET["eyeColor"];
-    echo "<br>";
-    echo $_REQUEST["eyeColor"];
-    echo "<br>";
-    // echo $_COOKIE["eyeColor"];
-    echo "<br>";
-    $_SESSION["userName"] = "Krossing";
-    echo $_SESSION["userName"];
-
-
-    ?>
+    </form>
+    </main>
 </body>
 </html>
